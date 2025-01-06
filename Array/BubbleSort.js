@@ -1,13 +1,13 @@
-function sortingBubbleSort(arrTwo){
-    n=arrTwo.length
-    for(let i=0;i<n;i++){
-        for(let j=0;j<n-i-1;j++){
-            if(arrTwo[j]>arrTwo[j+1]){
-                [arrTwo[j],arrTwo[j+1]]=[arrTwo[j+1],arrTwo[j]]
+function bubbleSortingTwo(arr){
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<arr.length-i-1;j++){
+            if(arr[j]>arr[j+1]){
+               [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
             }
         }
     }
-    return arrTwo
+
+    return arr;
 }
-let arrTwo=[10,4,6,3,2,6,8,9];
-console.log(sortingBubbleSort(arrTwo))
+let arr=[10,3,2,4,5,6,67,9]
+console.log(bubbleSortingTwo(arr))
